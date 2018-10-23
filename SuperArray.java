@@ -41,4 +41,21 @@ public class SuperArray {
     }
     return text + "]";
   }
+
+  public String get(int ind) {
+    if (ind >= size || ind < 0) {
+      System.out.println("ERROR:...........................Index out of range");
+      return null;
+    }
+    return data[ind];
+  }
+
+  public String set(int ind, String val) {
+    if (ind >= size || ind < 0) {
+      System.out.println("ERROR:...........................Index out of range");
+      return null;
+    }
+    data[ind] = val;
+    return "Item at index " + ind + " successfully set to " + val;
+  }
 }
