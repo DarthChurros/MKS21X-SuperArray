@@ -24,4 +24,13 @@ public class SuperArray {
     size++;
     return true;
   }
+
+  public String toString() {
+    String text = "[";
+    for (int i = 0; i < size; i++) {
+      text += data[i] + ", ";
+    }
+    text += "\b\b]";
+    return text;
+  }
 }
