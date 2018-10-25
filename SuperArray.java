@@ -110,10 +110,21 @@ public class SuperArray {
     data[index] = item;
   }
 
-  public void remove(int index) {
+  public String remove(int index) {
+    if (index >= size || index < 0) {
+      System.out.println("ERROR:...........................Index out of range");
+      return null;
+    }
+    String val = get(index);
     for (int i = index; i < size - 1; i++) {
       data[i] = data[i+1];
     }
     size--;
+    return val;
+  }
+
+  public boolean remove(String arg) {
+    remove(indexOf(arg));
+    return contains(arg);
   }
 }

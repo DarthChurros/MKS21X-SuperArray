@@ -56,6 +56,9 @@ public class Driver {
     System.out.println("SA status:                         " + SA.toString());
     SA.remove(6);
     System.out.println("\nRemoving the number \"5\" from index 6...");
+    System.out.println("SA status:                         " + SA.toString());
+    SA.remove("38");
+    System.out.println("\nRemoving the number \"38\" from SA...");
     System.out.println("SA status:                         " + SA.toString() + "\n\n");
 
     /**************************************************************************/
