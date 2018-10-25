@@ -77,12 +77,25 @@ public class SuperArray {
     data = temp;
   }
 
-  public boolean contains(String arg) {
+  public int indexOf(String arg) {
     for (int i = 0; i < size; i++) {
       if (data[i].equals(arg)) {
-        return true;
+        return i;
       }
     }
-    return false;
+    return -1;
+  }
+
+  public boolean contains(String arg) {
+    return indexOf(arg) != -1;
+  }
+
+  public int lastIndexOf(String arg) {
+    for (int i = 0; i < size; i++) {
+      if (data[size-i-1].equals(arg)) {
+        return size-i-1;
+      }
+    }
+    return -1;
   }
 }
