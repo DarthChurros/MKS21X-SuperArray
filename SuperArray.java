@@ -33,14 +33,21 @@ public class SuperArray {
     for (int i = 0; i < size; i++) {
       text += data[i] + ", ";
     }
-    text += "\b\b]";
+    if (size > 0) {
+      text += "\b\b";
+    }
+    text += "]";
     return text;
   }
 
   public String toStringDebug() {
     String text = toString() + "\b";
     for (int i = size; i < data.length; i++) {
-      text += ", null";
+      text += ", ";
+      if (i == 0) {
+        text += "\b\b";
+      }
+      text += "null";
     }
     return text + "]";
   }
