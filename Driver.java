@@ -32,5 +32,14 @@ public class Driver {
     System.out.println("Checking set value:                " + SA.get(1) + "\n\n");
 
     /**************************************************************************/
+
+    for (int i = SA.size(); i < 10; i++) {
+      SA.add("" + i);
+    }
+    System.out.println("Filling empty slots of SA with integers...");
+    System.out.println("Full status of SA:                 " + SA.toStringDebug() + "\n");
+    System.out.println("Adding \"churros\" to SA to test resize...");
+    SA.add("churros");
+    System.out.println("SA (capacity should have doubled): " + SA.toStringDebug());
   }
 }
