@@ -40,6 +40,13 @@ public class Driver {
     System.out.println("Full status of SA:                 " + SA.toStringDebug() + "\n");
     System.out.println("Adding \"churros\" to SA to test resize...");
     SA.add("churros");
-    System.out.println("SA (capacity should have doubled): " + SA.toStringDebug());
+    System.out.println("SA (capacity should have doubled): " + SA.toStringDebug() + "\n\n");
+
+    /**************************************************************************/
+
+    System.out.println("Checking SA for \"Fortnite\":      " + SA.contains("Fortnite"));
+    System.out.println("This should return true!");
+    System.out.println("Checking SA for \"jedi master\"    " + SA.contains("jedi master"));
+    System.out.println("This should return false!\n\n");
   }
 }
