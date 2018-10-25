@@ -20,6 +20,9 @@ public class SuperArray {
   }
 
   public boolean add(String item) {
+    if (size == data.length) {
+      resize();
+    }
     data[size] = item;
     size++;
     return true;
@@ -57,5 +60,13 @@ public class SuperArray {
     }
     data[ind] = val;
     return "Item at index " + ind + " successfully set to " + val;
+  }
+
+  private void resize() {
+    String[] temp = new String[data.length * 2 + 1];
+    for (int i = 0; i < data.length; i++) {
+      temp[i] = data[i];
+    }
+    data = temp;
   }
 }
