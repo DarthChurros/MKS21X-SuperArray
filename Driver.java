@@ -48,5 +48,16 @@ public class Driver {
     System.out.println("This should return true!");
     System.out.println("Checking SA for \"jedi master\"    " + SA.contains("jedi master"));
     System.out.println("This should return false!\n\n");
+
+    /**************************************************************************/
+
+    SA.add(5, "jedi master");
+    System.out.println("Adding \"jedi master\" to index 5...");
+    System.out.println("SA status:                         " + SA.toString());
+    SA.remove(6);
+    System.out.println("\nRemoving the number \"5\" from index 6...");
+    System.out.println("SA status:                         " + SA.toString() + "\n\n");
+
+    /**************************************************************************/
   }
 }

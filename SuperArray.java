@@ -98,4 +98,22 @@ public class SuperArray {
     }
     return -1;
   }
+
+  public void add(int index, String item) {
+    if (size == data.length) {
+      resize();
+    }
+    size++;
+    for (int i = size - 1; i > index; i--) {
+      data[i] = data[i-1];
+    }
+    data[index] = item;
+  }
+
+  public void remove(int index) {
+    for (int i = index; i < size - 1; i++) {
+      data[i] = data[i+1];
+    }
+    size--;
+  }
 }
