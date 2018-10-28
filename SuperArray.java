@@ -103,7 +103,7 @@ public class SuperArray {
   }
 
   public void add(int index, String item) {
-    if (index >= size || index < 0) {
+    if (index > size || index < 0) {
       throw new IndexOutOfBoundsException();
     }
     if (size == data.length) {
