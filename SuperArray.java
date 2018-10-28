@@ -59,16 +59,14 @@ public class SuperArray {
 
   public String get(int ind) {
     if (ind >= size || ind < 0) {
-      System.out.println("ERROR:...........................Index out of range");
-      return null;
+      throw new IndexOutOfBoundsException();
     }
     return data[ind];
   }
 
   public String set(int ind, String val) {
     if (ind >= size || ind < 0) {
-      System.out.println("ERROR:...........................Index out of range");
-      return null;
+      throw new IndexOutOfBoundsException();
     }
     data[ind] = val;
     return "Item at index " + ind + " successfully set to " + val;
@@ -105,6 +103,9 @@ public class SuperArray {
   }
 
   public void add(int index, String item) {
+    if (index >= size || index < 0) {
+      throw new IndexOutOfBoundsException();
+    }
     if (size == data.length) {
       resize();
     }
@@ -117,8 +118,7 @@ public class SuperArray {
 
   public String remove(int index) {
     if (index >= size || index < 0) {
-      System.out.println("ERROR:...........................Index out of range");
-      return null;
+      throw new IndexOutOfBoundsException();
     }
     String val = get(index);
     for (int i = index; i < size - 1; i++) {
